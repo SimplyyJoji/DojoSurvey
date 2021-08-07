@@ -14,13 +14,13 @@ namespace HelloASP
     }
     [HttpPost]
     [Route("Results")]
-    public IActionResult Results(string Name, string Location, string Language, string Comment)
+    public IActionResult Results(string Name, string Location, string Language, string Comments)
     {
     // Do something with form input
       ViewBag.Name = Name;
       ViewBag.Location = Location;
       ViewBag.Language = Language;
-      ViewBag.Comment = Comment;
+      ViewBag.Comments = Comments;
 
       return View("Results", ViewBag);
 
