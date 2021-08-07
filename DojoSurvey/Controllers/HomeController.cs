@@ -8,26 +8,24 @@ namespace HelloASP
     //localhost 5000/
     //short way to set up a route
     [HttpGet("")]
-    public ViewResult Index()
+    public IActionResult Index()
     {
       return View();
     }
-
-    
-  //Projects
-    [Route("projects")]
-    [HttpGet]
-    public ViewResult Project()
+    [HttpPost]
+    [Route("Results")]
+    public IActionResult Results(string Name, string Location, string Language, string Comment)
     {
-      return View();
+    // Do something with form input
+      ViewBag.Name = Name;
+      ViewBag.Location = Location;
+      ViewBag.Language = Language;
+      ViewBag.Comment = Comment;
+
+      return View("Results", ViewBag);
+
     }
 
-    //localhost 5000/users/
-    [HttpGet("view")]
-    public ViewResult Contact()
-  {
-    return View();
-  }
+}
 
-  }
 }

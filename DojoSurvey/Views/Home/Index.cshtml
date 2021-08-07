@@ -9,26 +9,26 @@
 <body>
 <div>
 <h1>Dojo Survey</h1>
-<form>
-  <label for="name">Name</label>
+<form action="Results" method="post">
+  <label for="name" name="Name">Name</label>
   <input type="text" id="name">
-  <label for="location">Choose A Location</label>
+  <label for="location" name="Location">Choose A Location</label>
   <select id="location">
   <option value="San Jose">San Jose</option>
   <option value="San Francisco">San Francisco</option>
   <option value="Bellvue">Bellvue</option>
   <option value="Irvine">Irvine</option>
 </select>
-  <label for="language">Choose A Language</label>
+  <label for="language" name="Language">Choose A Language</label>
   <select id="language">
   <option value="C#">C#</option>
   <option value="React">React</option>
   <option value="Python">Python</option>
   <option value="Java">Java</option>
 </select>
-    <label for="comments">Comments</label>
-    <textarea id="comments" name="txtname" rows="4" cols="50" maxlength="200">
+    <textarea id="comments" name="Comments" rows="4" cols="50" maxlength="200">
 </textarea>
+<button type="submit">Submit</button>
 </form>
 </div>
 </body>
